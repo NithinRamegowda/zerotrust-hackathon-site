@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard – Zero Trust Hackathon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Zero Trust Hackathon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="py-5">
+        <div class="container">
+            <h2 class="mb-4 text-center">Registration Dashboard</h2>
+            <p class="text-muted text-center mb-5">This dashboard summarises the registration data. Replace the sample JSON data with your own by generating an API endpoint or linking to a Google Sheet. See README.md for guidance.</p>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Registrations</h5>
+                            <p id="totalCount" class="display-6">0</p>
+                            <div class="progress" role="progressbar" aria-label="Registrations Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="25000">
+                                <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+                            </div>
+                            <small class="text-muted">Target: 25,000</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <canvas id="trackChart" height="200"></canvas>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped" id="registrantsTable">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Organization</th>
+                            <th>Track</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="py-4 bg-primary text-white">
+        <div class="container text-center">
+            <p>© 2025 Bank of Baroda • Skysecure • CyberFrat</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

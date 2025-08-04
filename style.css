@@ -1,0 +1,33 @@
+/* Custom styles for Zero Trust Hackathon site */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0d6efd;
+}
+
+nav.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+.card-title {
+  color: #0d6efd;
+}
+
+/* Table styling */
+table th, table td {
+  vertical-align: middle !important;
+}
+
+/* Progress bar text centering */
+.progress-bar {
+  font-size: 0.8rem;
+  color: #fff;
+}
